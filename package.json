@@ -1,0 +1,46 @@
+{
+  "name": "vds-commenter",
+  "displayName": "VDs Commenter",
+  "description": "This is the README for your extension \"vds-commenter\". After writing up a brief description, we recommend including the following sections.",
+  "version": "1.0.0",
+  "publisher": "Vidyadhar10",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vidyadhar10/VDS-commenter-extension.git"
+  },
+  "icon": "logo.png",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "main": "./out/extension.js",
+  "activationEvents": [
+    "onCommand:extension.sayHello"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  },
+  "dependencies": {
+    "vscode": "^1.1.37"
+  },
+  "bugs": {
+    "url": "https://github.com/Vidyadhar10/VDS-commenter-extension/issues"
+  },
+  "homepage": "https://github.com/Vidyadhar10/VDS-commenter-extension#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
