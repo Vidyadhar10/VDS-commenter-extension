@@ -10,14 +10,15 @@
   },
   "icon": "logo.png",
   "engines": {
-    "vscode": "^1.87.0"
+    "vscode": "^1.85.0"
   },
   "categories": [
     "Snippets"
   ],
-  "main": "./out/extension.js",
+  "main": "./src/extension.js",
+  "type": "commonjs",
   "activationEvents": [
-    "onCommand:extension.sayHello"
+    "onLanguage:javascript"
   ],
   "contributes": {
     "snippets": [
@@ -35,6 +36,7 @@
   },
   "homepage": "https://github.com/Vidyadhar10/VDS-commenter-extension#readme",
   "devDependencies": {
+    "@types/node": "^20.11.25",
     "mocha": "^5.2.0"
   },
   "scripts": {

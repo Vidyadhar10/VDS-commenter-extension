@@ -1,9 +1,22 @@
 import * as vscode from 'vscode';
 
+// Array to keep track of newly created file URIs
+const createdFileURIs: string[] = [];
+
 export function activate(context: vscode.ExtensionContext) {
     let disposable = vscode.workspace.onDidSaveTextDocument((document: vscode.TextDocument) => {
-        if (document.languageId === 'javascript' && document.uri.scheme === 'file') {
+        const uriString = document.uri.toString();
+
+        // Check if the saved document is one of the newly created files
+        if (createdFileURIs.includes(uriString)) {
+            // Insert template comments for the newly created file
             insertTemplate(document.uri);
+
+            // Remove the URI from the array since we handled it
+            const index = createdFileURIs.indexOf(uriString);
+            if (index !== -1) {
+                createdFileURIs.splice(index, 1);
+            }
         }
     });
 
@@ -29,4 +42,9 @@ function insertTemplate(uri: vscode.Uri) {
 
         vscode.workspace.applyEdit(edit);
     });
+}
+
+export function handleFileCreation(uri: vscode.Uri) {
+    // Add the URI of the newly created file to the array
+    createdFileURIs.push(uri.toString());
 }

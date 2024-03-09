@@ -1,65 +1,54 @@
-# vds-commenter README
+# VDs Commenter - Visual Studio Code Extension
 
-This is the README for your extension "vds-commenter". After writing up a brief description, we recommend including the following sections.
+VDs Commenter is a Visual Studio Code extension aimed at facilitating the process of adding comments in code files. This extension provides various code snippets with predefined comment structures to help developers quickly document their code.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Easy-to-use code snippets for commenting different code constructs.
+- Helps in maintaining code documentation standards.
+- Saves time by providing ready-to-use comment templates.
+- Improves code readability and collaboration.
 
-For example if there is an image subfolder under your extension project workspace:
+## Snippets Included
 
-\!\[feature X\]\(images/feature-x.png\)
+The extension includes snippets for commenting various code constructs such as:
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- JavaScript file header comments.
+- Loop comments (for, while, do-while).
+- Switch statement comments.
+- Function comments.
+- Callback function comments.
+- Error handling (try-catch) comments.
+- TODO comments.
+- Cross-browser compatibility comments.
+- API usage comments.
+- Hash table usage comments.
+- Code review comments.
+- Code complexity comments.
+- Code dependency comments.
+- Error handling strategy comments.
+- Version control comments.
+- Code documentation comments.
 
-## Requirements
+## Usage
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. Install the extension from the Visual Studio Code marketplace.
+2. Open a JavaScript file or any other supported file type.
+3. Type the prefix for the desired snippet, and the suggestion will appear.
+4. Press `Enter` to insert the snippet, and fill in the necessary details as prompted.
+5. Customize the comments according to your specific requirements.
+6. Enjoy enhanced code documentation and readability!
 
-## Extension Settings
+## Extension Information
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+- **Publisher:** Vidyadhar10
+- **Extension Name:** VDs Commenter
+- **Version:** 1.0.0
+- **License:** MIT
 
-For example:
+## Feedback and Support
 
-This extension contributes the following settings:
+If you have any feedback, suggestions, or issues regarding this extension, feel free to reach out by creating an issue on the GitHub repository.
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
 
 **Enjoy!**

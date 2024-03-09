@@ -1,19 +1,22 @@
 {
     "JavaScript File": {
-        "prefix": "js",
+        "prefix": "comment",
         "body": [
             "/**",
-            " * File: $0      // eg. : filename.js",
-            " * Author: ${1}    // eg. : John Doe",
-            " * Created: ${2}   // eg. : March 8, 2024",
-            " * Modified: ${3}  // March 10, 2024",
+            " * File: ${1}      // eg. : filename.js",
+            " * Author: ${2}    // eg. : John Doe",
+            " * Created: ${3}   // eg. : March 8, 2024",
+            " * Modified: ${4}  // March 10, 2024",
             " * Description: This file contains the implementation of XYZ feature.",
             " * Version: 1.0",
-            " */"                
+            " */",
+            "$0"                
         ],
         "description": "JavaScript file template"
     },
-    "For loop": {
+    // Commenting Loops:
+    // For Loop:
+    "For loop Comments": {
         "prefix": "for",
         "body": [
             "// Loop through each element in the array and log it",
@@ -22,6 +25,203 @@
             "\t",
             "}"
         ],
-        "description": "For loop over array"
-    }
+        "description": "For loop over array with before line comments"
+    },
+
+    // While Loop:
+    "While loop comments":{
+        "prefix": "while",
+        "body": [
+            "// Keep looping until the ${1} condition is met",
+            " while (${1:condition}) {",
+            "   // Do something",
+            "   ${0}",
+            "}"
+        ],
+        "description": "While loop with comments"
+    },
+    // Do- While Loop:
+    "Do-while comments": {
+        "prefix": "dowhile",
+        "body": [
+            "// Execute the code block at least once and then check the ${1:condition}",
+            "do {",
+            "    // Do something",
+            "    $0",
+            "} while (${1:condition});"
+        ],
+        "description": "Do while loop with comments"
+    },
+
+    // Commenting Switch Statements:
+    "Switch statement comments": {
+        "prefix": "switch",
+        "body": [
+            "switch (${1:expression}) {",
+            "    case ${2:value1}:",
+            "        // Code to execute if ${1:expression} equals ${2:value1}",
+            "        ${3}",
+            "        break;",
+            "    case ${4:value2}:",
+            "                ",
+            "        break;",
+            "    default:",
+            "        break;",
+            "}"
+        ],
+        "description": "Switch Statements with comments"
+    },
+    // Functions with comment
+    "Function with comments": {
+        "prefix": "function",
+        "body": [
+            "/*", 
+            "   This function ${1: // eg. calculates the sum of two numbers}",
+            "   Parameters used ${3:params}",
+            "*/",
+            "function ${2:name}(${3:params}) {",
+            "    ${0}",
+            "}",
+        ],
+        "description": "Function with comments"
+    },
+    
+    // Commenting Callback Functions:
+    "Callback Function": {
+        "prefix": "callback",
+        "body": [
+          "// Example function that takes a callback",
+          "function ${1:name}(${2:callback}) {",
+          "  // Simulating asynchronous operation, like fetching data from a server",
+          "    const data = ${3:data};",
+          "    ${2:callback}(data); // Calling the callback function with the fetched data",
+          "}",
+          "",
+          "// Callback function to process the fetched data",
+          "function ${4:processData}(${5:data}) {",
+          "  console.log('Received data:', ${5:data});",
+          "}"
+        ],
+        "description": "Create a callback function example"
+    },
+
+    // Commenting Error Handling:
+    "Try-Catch Block with comments": {
+        "prefix": "trycatch",
+        "body": [
+          "try {",
+          "    // Code that may throw an error",
+          "    ${0}",
+          "} catch (${1:error}) {",
+          "    // Handle the error gracefully",
+          "    console.error('An error occurred:', ${1:error});",
+          "}"
+        ],
+        "description": "Create a try-catch block"
+    },
+
+    // Commenting on Future Work or TODOs:
+    "TODO Comment": {
+        "prefix": "todo",
+        "body": [
+          "/* Document future work or tasks to be addressed:",
+          "   TODO: Refactor this function for better error handling.",
+          "   ${0}",
+          "*/"
+        ],
+        "description": "TODO: Comment for future work or TODOs"
+    },
+    
+    // Commenting on Cross-Browser Compatibility:
+    "Cross-Browser Compatibility Comment": {
+        "prefix": "crossbrowser",
+        "body": [
+          "// Workaround for $1's lack of support for $2",
+          "$3"
+        ],
+        "description": "Comment for cross-browser compatibility"
+    },
+
+    // Commenting on API Usage:
+    "API Usage Comment": {
+        "prefix": "apiusage",
+        "body": [
+          "// Fetch data from the server using the $1 library",
+          "$2"
+        ],
+        "description": "Comment for API usage"
+    },
+
+    // Using a hash table for faster lookup:
+    "Using a Hash Table": {
+        "prefix": "hashtable",
+        "body": [
+          "// Using a hash table for faster lookup",
+          "const hashTable = {};",
+          "$1"
+        ],
+        "description": "Comment on using a hash table"
+    },
+
+    // Commenting for Code Reviews:
+    "Code Reviews Comment": {
+        "prefix": "codereview",
+        "body": [
+          "// Consider $1",
+          "$2"
+        ],
+        "description": "Comment for code reviews"
+    },
+
+    // Commenting on Code Complexity:
+    "Code Complexity Comment": {
+        "prefix": "complexity",
+        "body": [
+          "/* Refactor complex logic into smaller, more understandable functions",
+          "     ${1:eg. Time Complexity: O(n)}",
+          "     ${2:eg. Space Complexity: O(n)}",
+          "*/"
+        ],
+        "description": "Comment for code complexity"
+    },
+    
+    // Commenting on Code Dependencies:
+    "Code Dependencies Comment": {
+        "prefix": "dependencies",
+        "body": [
+          "// Manage dependencies using a package manager like npm or yarn",
+          "$1"
+        ],
+        "description": "Comment for code dependencies"
+    },
+
+    // Commenting on Error Handling Strategy:
+    "Error Handling Strategy Comment": {
+        "prefix": "errorhandling",
+        "body": [
+          "// Implement a centralized error handling strategy for consistent error management",
+          "$1"
+        ],
+        "description": "Comment for error handling strategy"
+    },
+
+    // Commenting on Version Control:
+    "Version Control Comment": {
+        "prefix": "versioncontrol",
+        "body": [
+          "// Use version control (e.g., Git) to track changes and collaborate with team members",
+          "$1"
+        ],
+        "description": "Comment for version control"
+    },
+
+    // Commenting on Code Documentation:
+    "Code Documentation Comment": {
+        "prefix": "documentation",
+        "body": [
+          "// Document code using tools like JSDoc for automated documentation generation",
+          "$1"
+        ],
+        "description": "Comment for code documentation"
+    },
 }

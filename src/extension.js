@@ -1,11 +1,21 @@
 "use strict";
-exports.__esModule = true;
-exports.activate = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.handleFileCreation = exports.activate = void 0;
 var vscode = require("vscode");
+// Array to keep track of newly created file URIs
+var createdFileURIs = [];
 function activate(context) {
     var disposable = vscode.workspace.onDidSaveTextDocument(function (document) {
-        if (document.languageId === 'javascript' && document.uri.scheme === 'file') {
+        var uriString = document.uri.toString();
+        // Check if the saved document is one of the newly created files
+        if (createdFileURIs.includes(uriString)) {
+            // Insert template comments for the newly created file
             insertTemplate(document.uri);
+            // Remove the URI from the array since we handled it
+            var index = createdFileURIs.indexOf(uriString);
+            if (index !== -1) {
+                createdFileURIs.splice(index, 1);
+            }
         }
     });
     context.subscriptions.push(disposable);
@@ -29,3 +39,8 @@ function insertTemplate(uri) {
         vscode.workspace.applyEdit(edit);
     });
 }
+function handleFileCreation(uri) {
+    // Add the URI of the newly created file to the array
+    createdFileURIs.push(uri.toString());
+}
+exports.handleFileCreation = handleFileCreation;
