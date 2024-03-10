@@ -43,7 +43,7 @@ The extension includes snippets for commenting various code constructs such as:
 
 - **Publisher:** Vidyadhar10
 - **Extension Name:** VDs Commenter
-- **Version:** 1.0.0
+- **Version:** 1.1.0
 - **License:** MIT
 
 ## Feedback and Support
